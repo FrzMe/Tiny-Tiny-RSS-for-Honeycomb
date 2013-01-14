@@ -1008,18 +1008,7 @@ public class OnlineActivity extends CommonActivity {
 		m_menu = menu;
 
 		initMenu();
-		
-		List<PackageInfo> pkgs = getPackageManager()
-				.getInstalledPackages(0);
 
-		for (PackageInfo p : pkgs) {
-			if ("org.fox.ttrss.key".equals(p.packageName)) {
-				Log.d(TAG, "license apk found");
-				menu.findItem(R.id.donate).setVisible(false);
-				break;
-			}
-		}
-		
 		return true;
 	}
 	
